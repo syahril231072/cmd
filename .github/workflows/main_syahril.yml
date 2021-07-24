@@ -59,4 +59,4 @@ jobs:
         with:
           app-name: 'syahril'
           slot-name: 'production'
-          publish-profile: ${{ secrets.AzureAppService_PublishProfile_f280888386854a23bfebfac500b2bb0b }}
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_8ea0d09eea704a2e9d605e4de3eb8499 }}
