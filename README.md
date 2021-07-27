@@ -5,6 +5,7 @@
 
 ### Analyze costs, scalability, availability, and workflow.
 Cost
+
 For Virtual Machine
 For App Service
 Scalability
