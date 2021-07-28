@@ -5,6 +5,11 @@
 
 ### Analyze costs, scalability, availability, and workflow.
 
+| Command | Description |
+| --- | --- |
+| git status | List all new or modified files |
+| git diff | Show file differences that haven't been staged |
+
 VMs are more expensiva than App Service because we also have to manage the middleware, operation system, runtime and it will increase cost.
 
 VMs are more scalable than App Service. There are hardware limitations in App Service, such as a maximum of 14GB of memory and 4 vCPU cores per instance 
