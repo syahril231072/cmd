@@ -7,20 +7,9 @@
 
 |  Virtual Machines | App Service |
 | --- | --- |
-| There are 3 plans: Pay as You Go, Spot, Reserve (1year/ 3year), For PAYG there are basic and standard VM for Linux and Windows, and the price is hourly based |There are 5 plans, Free (F), Shared (D), Basic (B), Standard (S), Premium (P), F1 = Free
-D1 = 9.67 USD/month
-B1 = 55.80 USD/month
-B2 = 111.60 USD/month
-B3 = 223.20 USD/month
-S1 = 74.40 USD/month
-S2 = 148.40 USD/month
-S3 = 297.60 USD/month
-P1 = 223.20 USD/month
-P2 = 446.40 USD/month
-P3 = 892.80 USD/month |
-| git diff | Show file differences that haven't been staged |
+| There are 3 plans: Pay as You Go, Spot, Reserve (1year/ 3year), For PAYG there are basic and standard VM for Linux and Windows, and the price is hourly based |There are 5 plans, Free (F), Shared (D), Basic (B), Standard (S), Premium (P), and the price is monthly based F1 = Free D1 = 9.67 USD/month B1 = 55.80 USD/month B2 = 111.60 USD/month B3 = 223.20 USD/month S1 = 74.40 USD/month S2 = 148.40 USD/month S3 = 297.60 USD/month P1 = 223.20 USD/month P2 = 446.40 USD/month P3 = 892.80 USD/month |
 
-VMs are more expensive than App Service because we also have to manage the middleware, operation system, runtime and it will increase cost.
+VMs are more flexible as it is paid hourly, but app service is paid monthly, except for free tiers.
 
 | Scalability | Virtual Machines | App Service |
 | --- | --- | --- |
@@ -41,12 +30,12 @@ In term of workflow, the development of app is much simpler and faster in Azure 
 
 ### Choose the appropriate solution (VM or App  Service) for deploying the app
 
-The choice depends on whether we need to build to simple, faster application and lest costly or the application that is complex and used by many people so we need scalability and availability. If workflow and cost is our main consideration, than we should choose App service, but if scalability or availability is our main consideration than we choose VM.
+The choice depends on whether on our application.If we wanted to verify our server configurations and analyze some performance issues. It seems this isn’t possible, since App Service is a managed platform that handles deployment for us. There is no simple way to gain access to the app configuration files once it’s running. Virtual machine is also more scalable and available than App Service. In term of price we need to calculate first as both have different tier price. But for workflow App Service is more simple.   
 
 ### Justify your choice
  
-As CMS app is simple application and not used by many people, that is why I choose use VM.
+As we assume CMS app is simple application, we better choose use App Service because managed platform that handles deployment for us. We can also use F1 Tier of App Service as it is free. Even the simplest VM (Compute (A0), PAYG, West US Region, Linux OS, Ubuntu Type, Basic Tier) cost US $ 0.018 per hour or US$13.14 Average per month.
 
 ## Assess app changes that would change your decision.
 
-But if the user of application is increasing a lot and need more feature, than scalability and availability become main consideration, than we have to move the application to run in VM.
+But if the user of application is increasing a lot and need more feature, than scalability and availability become main consideration and we want verify our server configurations and analyze some performance issues, than we have to move the application to run in VM.
