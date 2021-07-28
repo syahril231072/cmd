@@ -5,9 +5,19 @@
 
 ### Analyze costs, scalability, availability, and workflow.
 
-| Command | Description |
+|  Virtual Machines | App Service |
 | --- | --- |
-| git status | List all new or modified files |
+| There are 3 plans: Pay as You Go, Spot, Reserve (1year/ 3year), For PAYG there are basic and standard VM for Linux and Windows, and the price is hourly based |There are 5 plans, Free (F), Shared (D), Basic (B), Standard (S), Premium (P), F1 = Free
+D1 = 9.67 USD/month
+B1 = 55.80 USD/month
+B2 = 111.60 USD/month
+B3 = 223.20 USD/month
+S1 = 74.40 USD/month
+S2 = 148.40 USD/month
+S3 = 297.60 USD/month
+P1 = 223.20 USD/month
+P2 = 446.40 USD/month
+P3 = 892.80 USD/month |
 | git diff | Show file differences that haven't been staged |
 
 VMs are more expensive than App Service because we also have to manage the middleware, operation system, runtime and it will increase cost.
@@ -25,7 +35,7 @@ VMs are more scalable than App Service in term of Autoscaling, Load Balancer and
 | SLA | SLA for Virtual Machines | SLA for App Service |
 | Multi region failover | Traffic manager | Traffic manager |
 
-Availability means to reduce the possibility of service impact in case of planned or unplanned downtimes. In term of Multi region failover, VMs and App Service have trafic manager. However in term of SLA, VMs and App Service have different SLA. In this regards VMs have more availability because they have two options when it comes to scaling—Virtual Machine Scale Sets and Load Balancers. There are also constraints for the support of certain programming languages on Azure App Service. If we choose VM, we could create environment for the choosen programming language.
+Availability means to reduce the possibility of service impact in case of planned or unplanned downtimes. In term of Multi region failover, VMs and App Service have trafic manager. However in term of SLA, VMs and App Service have different SLA. In this regards VMs have more availability because For all Virtual Machines that have two or more instances deployed across two or more Availability Zones in the same Azure region, Azure guarantee you will have Virtual Machine Connectivity to at least one instance at least 99.99% of the time. This more than App Service where Azure guarantee that Apps running in a customer subscription will be available 99.95% of the time. Only on Virtual Machines that have two or more instances deployed in the same Availability Set or in the same Dedicated Host Group, Virtual Machines that have two or more instances deployed in the same Availability Set or in the same Dedicated Host Group and Single Instance Virtual Machine using Standard HDD Managed Disks for Operating System Disks and Data Disks, azure gurantee less than 99,95%.
 
 In term of workflow, the development of app is much simpler and faster in Azure App Service. 
 
