@@ -9,7 +9,7 @@
 | --- | --- |
 | There are 3 plans: Pay as You Go, Spot, Reserve (1year/ 3year), For PAYG there are basic and standard VM for Linux and Windows, and the price is hourly based |There are 5 plans, Free (F), Shared (D), Basic (B), Standard (S), Premium (P), and the price is monthly based F1 = Free D1 = 9.67 USD/month B1 = 55.80 USD/month B2 = 111.60 USD/month B3 = 223.20 USD/month S1 = 74.40 USD/month S2 = 148.40 USD/month S3 = 297.60 USD/month P1 = 223.20 USD/month P2 = 446.40 USD/month P3 = 892.80 USD/month |
 
-VMs are more flexible as it is paid hourly, but app service is paid monthly, except for free tiers.
+VMs are more flexible they are paid hourly, but app service is paid monthly, except for free tiers.
 
 | Scalability | Virtual Machines | App Service |
 | --- | --- | --- |
@@ -38,4 +38,4 @@ As we assume CMS app is simple application, we better choose use App Service bec
 
 ## Assess app changes that would change your decision.
 
-But if the user of application is increasing a lot and need more feature, than scalability and availability become main consideration and we want verify our server configurations and analyze some performance issues, than we have to move the application to run in VM.
+But if the user of our application is increasing a lot and needs more feature, scalability and availability become out main consideration and we want to verify our server configurations and analyze some performance issues, than we have to move the application to run in VM.
